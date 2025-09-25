@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client";
 
 import React, { useState } from "react";
@@ -69,28 +71,29 @@ export default function ClientActions({ email }) {
           border-radius: 8px;
           border: 1px solid rgba(0,0,0,0.08);
           color: #000;
-          background: white;
+          background: #fff;
           cursor: pointer;
         }
 
         .btn.outline { 
             background: transparent; 
-            border: 1px solid rgba(0,0,0,0.12); 
+            border: 1px solid #fff;
+            color: white; 
         }
         .btn.outline:hover {
-            color: white;
+            color: #fff;
             background: #a6a6a6b9;
         }
 
         .btn.danger { 
             background: #ff6b6b; 
-            color: white; 
+            color: #fff; 
             border: none; 
         }
         .btn.danger:hover {
             background: #ff3b3bff;
         }
-
+        
         .btn:disabled { opacity: 0.6; cursor: not-allowed; }
       `}</style>
     </div>

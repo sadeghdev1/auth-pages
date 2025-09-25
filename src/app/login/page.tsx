@@ -1,15 +1,17 @@
+// @ts-nocheck
+
 'use client';
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import styles from "./register.module.scss";
+import styles from "./login.module.scss";
 import toast from "react-hot-toast";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 
-const REGISTER_API = "https://taysatest.pythonanywhere.com/api/auth/register/"; 
+const LOGIN_API = "https://taysatest.pythonanywhere.com/api/auth/login/";
 
-export default function RegisterPage() {
+export default function LoginPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [showPass, setShowPass] = useState(false);
@@ -21,26 +23,24 @@ export default function RegisterPage() {
   const onSubmit = async (data) => {
   setLoading(true);
   try {
-    const res = await fetch(REGISTER_API, {
+    const res = await fetch(LOGIN_API, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        nickname: data.nickname,
-        email: data.email,
-        password: data.password
-      })
+      body: JSON.stringify({ email: data.email, password: data.password })
     });
 
     const json = await res.json();
 
     if (!res.ok) {
-      const message = json?.message || json?.error || "Registration failed";
+      const message = json?.message || json?.error || "Login failed";
       toast.error(message, { id: "auth-error" });
     } else {
+      // extract token & user safely (support multiple shapes)
       const possibleToken = json?.data?.[0]?.access_token || json?.access_token || json?.token || json?.auth_token || null;
       const possibleUser = json?.data?.[0] || json?.user || json?.data?.user || null;
 
       if (possibleToken) {
+        // set access_token cookie so server-side can read it
         Cookies.set("access_token", possibleToken, { expires: 7, path: "/" });
       }
 
@@ -49,8 +49,8 @@ export default function RegisterPage() {
         Cookies.set("user_info", JSON.stringify(userSafe), { expires: 7, path: "/" });
       }
 
-      toast.success("Registration successful — redirecting to Login", { id: "auth-success" });
-      router.push("/login");
+      toast.success("Login successful — redirecting to Dashboard", { id: "auth-success" });
+      router.push("/dashboard");
     }
     } catch (err) {
       console.error(err);
@@ -64,19 +64,9 @@ export default function RegisterPage() {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <h2 className={styles.title}>Create account</h2>
+        <h2 className={styles.title}>Sign in</h2>
 
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.field}>
-            <label className={styles.label}>Nickname</label>
-            <input
-              className={styles.input}
-              {...register("nickname", { required: "Nickname is required" })}
-              placeholder="Your nickname"
-            />
-            {errors.nickname && <p className={styles.errorText}>{errors.nickname.message}</p>}
-          </div>
-
           <div className={styles.field}>
             <label className={styles.label}>Email</label>
             <input
@@ -104,7 +94,7 @@ export default function RegisterPage() {
                     message: "Must include letters and numbers"
                   }
                 })}
-                placeholder="At least 8 chars with letters and numbers"
+                placeholder="Your password"
               />
               <button
                 type="button"
@@ -120,14 +110,13 @@ export default function RegisterPage() {
 
           <div className={styles.actions}>
             <button className={styles.button} type="submit" disabled={loading}>
-              {loading ? "Submitting..." : "Register"}
+              {loading ? "Signing in..." : "Sign In"}
             </button>
           </div>
-
         </form>
 
         <p className={styles.smallText}>
-          Already have an account? <a className={styles.link} onClick={() => router.push("/login")}>Sign in</a>
+          Don't have an account? <a className={styles.link} onClick={() => router.push("/register")}>Register</a>
         </p>
       </div>
     </div>

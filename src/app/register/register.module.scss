@@ -123,6 +123,8 @@
   cursor: pointer;
 }
 
+.link:hover {color: #00d4ff;}
+
 /* responsive */
 @media (max-width: 480px) {
   .card { padding: 1.25rem; max-width: 100%; }
