@@ -1,4 +1,3 @@
-// src/app/dashboard/page.js
 import { cookies } from "next/headers";
 import ClientActions from "./ClientActions";
 import styles from './dashboard.module.scss'
@@ -9,6 +8,10 @@ function hasFullProfile(userObj) {
   if (!userObj) return false;
   return (userObj.nickname || userObj.name || userObj.last_login || userObj.income || userObj.expense) ? true : false;
 }
+
+export const metadata = {
+  title: "Dashboard"
+};
 
 export default async function DashboardPage() {
   let cookieStore = null;
@@ -24,11 +27,10 @@ export default async function DashboardPage() {
 
   const renderUserSection = (user, source="cookie") => (
     <main className={styles.dashboard}>
-      <h1 className={styles.title}>Dashboard ({source})</h1>
+      <h1 className={styles.title}>Dashboard <span style={{fontWeight:500, fontSize:30}}>({source})</span></h1>
       <section className={styles.userInfo}>
         <p><strong>Id:</strong> {user.id ?? "—"}</p>
         <p><strong>Nickname:</strong> {user.nickname ?? "—"}</p>
-        <p><strong>Name:</strong> {user.name ?? "—"}</p>
         <p><strong>Email:</strong> {user.email ?? "—"}</p>
         <p><strong>Last login:</strong> {user.last_login ? new Date(user.last_login).toLocaleString() : "—"}</p>
         <p><strong>Income:</strong> {user.income ?? '—'}</p>

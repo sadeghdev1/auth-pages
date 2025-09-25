@@ -1,4 +1,3 @@
-// src/app/dashboard/ClientUserFetcher.js
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -15,7 +14,6 @@ export default function ClientUserFetcher({ apiUrl }) {
     (async () => {
       setLoading(true);
       try {
-        // 1) سعی کن user_info مستقیم از کوکی بخوانی (اگر client-set شده)
         const userInfoCookie = Cookies.get("user_info");
         if (userInfoCookie) {
           try {
@@ -28,7 +26,6 @@ export default function ClientUserFetcher({ apiUrl }) {
           }
         }
 
-        // 2) سپس توکن را بخوان و اگر هست با Authorization header به API بزن
         const token = Cookies.get("access_token") || Cookies.get("auth_token");
         if (!token) {
           setLoading(false);
@@ -82,7 +79,6 @@ export default function ClientUserFetcher({ apiUrl }) {
     <section>
         <h2>Client-side user</h2>
         <p><strong>Nickname:</strong> {user.nickname ?? user.name ?? '—'}</p>
-        <p><strong>Name:</strong> {user.name ?? user.nickname ?? '—'}</p>
         <p><strong>Email:</strong> {user.email ?? '—'}</p>
         <p><strong>Last login:</strong> {user.last_login ? new Date(user.last_login).toLocaleString() : '—'}</p>
         <p><strong>Income:</strong> {user.income ?? '—'}</p>

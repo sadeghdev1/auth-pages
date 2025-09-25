@@ -46,7 +46,7 @@ export default function ClientActions({ email }) {
     toast.success("Profile refreshed");
   };
 
-  // other buttons (copy, refresh, edit) kept as-is...
+  // other buttons (copy, refresh, edit) kept as is...
   const copyEmail = async () => {
     if (!email) return toast.error("No email");
     try { await navigator.clipboard.writeText(email); toast.success("Email copied"); }
