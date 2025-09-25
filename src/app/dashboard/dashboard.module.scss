@@ -1,0 +1,60 @@
+.dashboard {
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #2a254a 45%, #6b3fa0 100%);
+  color: #f0f0f0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+
+  h1.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  section.userInfo {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      strong {
+        color: #9b6cff;
+      }
+    }
+
+    .errorText {
+      color: #ff6b6b;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  button {
+    background: #9b6cff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #7d4ecc;
+      color: #fff;
+    }
+
+    &:disabled {
+      background: #555;
+      cursor: not-allowed;
+    }
+  }
+}

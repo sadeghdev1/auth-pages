@@ -1,6 +1,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #2a254a 45%, #6b3fa0 100%);
+  --accent: #9b6cff;           
+  --accent-2: #5e4db2;        
+  --muted: #9aa3b2;
+  --card-bg: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.04);
+  --glass-2: rgba(255,255,255,0.02);
+  --surface: rgba(255,255,255,0.03);
+  --text: #e6eef8;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(2,6,23,0.6);
 }
 
 @media (prefers-color-scheme: dark) {

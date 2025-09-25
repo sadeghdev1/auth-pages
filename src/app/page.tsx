@@ -1,9 +1,9 @@
-import React from 'react'
+// import Image from "next/image";
+// import styles from "./page.module.css";
+import { redirect } from "next/navigation";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div>Taysa</div>
-  )
+    redirect("/login")
+  );
 }
-
-export default Home
