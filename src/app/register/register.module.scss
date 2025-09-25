@@ -122,8 +122,8 @@
   color: #9fb2ff;
   cursor: pointer;
 }
-
-.link:hover {color: #00d4ff;}
+.link { cursor: pointer; text-decoration: none; }
+.link:hover {color: #00d4ff; text-decoration: underline; }
 
 /* responsive */
 @media (max-width: 480px) {

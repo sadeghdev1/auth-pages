@@ -95,8 +95,8 @@
 }
 
 .smallText { text-align:center; font-size:0.9rem; margin-top:0.8rem; color:#b7c6e6; }
-.link { cursor: pointer; text-decoration: underline; }
-.link:hover {color: #00d4ff;}
+.link { cursor: pointer; text-decoration: none; }
+.link:hover {color: #00d4ff; text-decoration: underline; }
 .passwordRow { position: relative; }
 .toggleBtn { position:absolute; right:10px; top:50%; transform: translateY(-50%); background:transparent; border:none; color:#9fb2ff; cursor:pointer; }
 
