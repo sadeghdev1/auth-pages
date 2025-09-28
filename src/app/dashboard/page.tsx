@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { cookies } from "next/headers";
 import ClientActions from "./ClientActions";
 import styles from './dashboard.module.scss'

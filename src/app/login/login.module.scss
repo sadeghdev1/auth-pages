@@ -45,7 +45,9 @@
   color: #fff;
   outline: none;
 }
-
+.input:hover {
+  border-color: #a0aac07c;
+}
 .input:focus {
   border-color: #7c3aed;
   box-shadow: 0 6px 20px rgba(124,58,237,0.12);
