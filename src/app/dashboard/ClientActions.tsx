@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import styles from "./dashboard.module.scss";
 
 export default function ClientActions({ email }) {
   const router = useRouter();
@@ -55,45 +56,13 @@ export default function ClientActions({ email }) {
 
   return (
     <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 20 }}>
-      <button onClick={refreshProfile} className="btn outline">Refresh</button>
-      <button onClick={copyEmail} className="btn">Copy Email</button>
+      <button onClick={refreshProfile} className={`${styles.btn} ${styles.outline}`}>Refresh</button>
+      <button onClick={copyEmail} className={styles.btn}>Copy Email</button>
 
       {/* single unified logout */}
-      <button onClick={unifiedLogout} className="btn danger" disabled={loading}>
+      <button onClick={unifiedLogout} className={`${styles.btn} ${styles.danger}`} disabled={loading}>
         {loading ? "Logging out..." : "Logout"}
       </button>
-
-      <style jsx>{`
-        .btn {
-          padding: 8px 12px;
-          border-radius: 8px;
-          border: 1px solid rgba(0,0,0,0.08);
-          color: #000;
-          background: #fff;
-          cursor: pointer;
-        }
-
-        .btn.outline { 
-            background: transparent; 
-            border: 1px solid #fff;
-            color: white; 
-        }
-        .btn.outline:hover {
-            color: #fff;
-            background: #a6a6a6b9;
-        }
-
-        .btn.danger { 
-            background: #ff6b6b; 
-            color: #fff; 
-            border: none; 
-        }
-        .btn.danger:hover {
-            background: #ff3b3bff;
-        }
-        
-        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
-      `}</style>
     </div>
   );
 }
