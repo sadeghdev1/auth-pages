@@ -27,15 +27,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        {/* اگر ترجیح میدی این external CSS رو با metadata یا next/head اضافه کنی، 
-            اینجا هم قابل استفاده است. */}
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
       </head>
       <body>
-        {/* Providers یک Client Component است (با "use client") — استفاده‌اش در Server Component مجاز است */}
         <Providers>{children}</Providers>
       </body>
     </html>

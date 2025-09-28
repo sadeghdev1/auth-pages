@@ -1,4 +1,3 @@
-// src/lib/types.ts
 export interface User {
   id?: number;
   nickname?: string;
@@ -9,7 +8,6 @@ export interface User {
   expense?: number;
   access_token?: string;
   refresh_token?: string;
-  // هر فیلد دلخواه دیگری که API ممکن است برگرداند
 }
 
 export interface ApiListResponse<T = any> {
