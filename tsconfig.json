@@ -17,8 +17,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "src",
-    "ignoreDeprecations": "6.0",
     "jsx": "preserve",
     "plugins": [
       {
