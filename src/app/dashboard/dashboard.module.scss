@@ -58,3 +58,40 @@
     }
   }
 }
+
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  color: #000;
+  background: #fff;
+  cursor: pointer;
+
+
+  &.outline { 
+    background: transparent; 
+    border: 1px solid #fff;
+    color: white; 
+
+    &:hover {
+      color: #fff;
+      background: #959595a6;
+    }
+  }
+
+  &.danger { 
+    background: #ff6b6b; 
+    color: #fff; 
+    border: none; 
+  
+    &:hover {
+      background: #ff3b3bff;
+    }
+  }
+  
+  &:disabled { 
+    opacity: 0.6; 
+    cursor: not-allowed; 
+  }
+}

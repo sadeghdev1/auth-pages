@@ -16,6 +16,9 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "src",
+    "ignoreDeprecations": "6.0",
     "jsx": "preserve",
     "plugins": [
       {
@@ -27,7 +30,8 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "scr/types.d.ts"
   ],
   "exclude": [
     "node_modules"

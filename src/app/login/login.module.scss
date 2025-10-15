@@ -45,7 +45,9 @@
   color: #fff;
   outline: none;
 }
-
+.input:hover {
+  border-color: #a0aac07c;
+}
 .input:focus {
   border-color: #7c3aed;
   box-shadow: 0 6px 20px rgba(124,58,237,0.12);
@@ -99,7 +101,7 @@
 
 .smallText { text-align:center; font-size:0.9rem; margin-top:0.8rem; color:#b7c6e6; }
 .link { cursor: pointer; text-decoration: none; }
-.link:hover { color: #00d4ff; text-decoration: underline; }
+.link:hover {color: #00d4ff; text-decoration: underline; }
 .passwordRow { position: relative; }
 
 @media (max-width:480px) {

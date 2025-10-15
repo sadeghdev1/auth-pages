@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 // @ts-nocheck
 
 'use client';
 
+=======
+'use client';
+
+type RegisterFormData = {
+  nickname: string;
+  email: string;
+  password: string;
+};
+
+>>>>>>> front_task/sadegh-movahed
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./register.module.scss";
@@ -16,11 +27,20 @@ export default function RegisterPage() {
   const [loading, setLoading] = useState(false);
   const [showPass, setShowPass] = useState(false);
 
+<<<<<<< HEAD
   const { register, handleSubmit, formState: { errors } } = useForm({
     mode: "onTouched"
   });
 
   const onSubmit = async (data) => {
+=======
+  const { register, handleSubmit, formState: { errors } } = useForm<RegisterFormData>({
+  mode: "onTouched"
+});
+
+
+  const onSubmit = async (data: RegisterFormData) => {
+>>>>>>> front_task/sadegh-movahed
   setLoading(true);
   try {
     const res = await fetch(REGISTER_API, {
@@ -33,7 +53,11 @@ export default function RegisterPage() {
       })
     });
 
+<<<<<<< HEAD
     const json = await res.json();
+=======
+    const json: any = await res.json();
+>>>>>>> front_task/sadegh-movahed
 
     if (!res.ok) {
       const message = json?.message || json?.error || "Registration failed";
