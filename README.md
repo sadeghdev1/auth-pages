@@ -61,19 +61,31 @@ NEXT_PUBLIC_API_URL=https://share.apidog.com/4b7ea7f3-044c-4fa5-934b-3ad39e0f961
 ### 6. Open the app
 Visit http://localhost:3000
 
+---
+
 ## 🧑‍💻 How It Works
 
 ### 1. Register:
 
 • User submits credentials to the /register API endpoint.
+
 • Backend creates a new user and returns a token.
 
 ### 2. Login:
 
 • User submits login credentials to /login.
+
 • If valid, receives a token stored in cookies for session management.
 
 ### 3. Dashboard:
 
 • Accessed only after authentication.
+
 • Displays user data fetched securely from /user or /profile endpoint.
+
+---
+
+## 📦 Deployment
+
+Deployed with Vercel:
+👉 Live Demo: auth-pages1.vercel.app
