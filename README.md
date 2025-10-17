@@ -85,7 +85,7 @@ npm run dev
 
 ---
 
-## 📦 Deployment :
+## 📦 Deployment
 
 Deployed with Vercel:
 
