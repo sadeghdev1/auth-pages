@@ -40,21 +40,21 @@ NEXT_PUBLIC_API_URL=https://share.apidog.com/4b7ea7f3-044c-4fa5-934b-3ad39e0f961
 ## ⚙️ Installation & Setup
 
 To run this project locally:
-# 1. Clone the repository
+### 1. Clone the repository
 git clone https://github.com/sadeghdev1/auth-pages.git
 
-# 2. Navigate to the project directory
+### 2. Navigate to the project directory
 cd auth-pages
 
-# 3. Install dependencies
+### 3. Install dependencies
 npm install
 
-# 4. Create a .env.local file and set your API URL
+### 4. Create a .env.local file and set your API URL
 NEXT_PUBLIC_API_URL=https://your-api-link.com/api
 
-# 5. Run the development server
+### 5. Run the development server
 npm run dev
 
-# 6. Open the app
-# Visit http://localhost:3000
+### 6. Open the app
+### Visit http://localhost:3000
 
