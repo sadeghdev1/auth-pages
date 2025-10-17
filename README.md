@@ -90,3 +90,7 @@ npm run dev
 Deployed with Vercel:
 
 👉 Live Demo: https://auth-pages1.vercel.app
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!
