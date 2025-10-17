@@ -28,6 +28,8 @@ NEXT_PUBLIC_API_URL=https://share.apidog.com/4b7ea7f3-044c-4fa5-934b-3ad39e0f961
 ```
 ---
 
+## Tech Stack
+
 | Category      | Technologies                                    |
 | ------------- | ----------------------------------------------- |
 | Framework     | [Next.js](https://nextjs.org/)                  |
@@ -39,6 +41,17 @@ NEXT_PUBLIC_API_URL=https://share.apidog.com/4b7ea7f3-044c-4fa5-934b-3ad39e0f961
 | Deployment    | [Vercel](https://vercel.com/)                   |
 
 ---
+
+## 🧰 Tech Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| Framework | [Next.js](https://nextjs.org/) |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Forms | [React Hook Form](https://react-hook-form.com/) |
+| Notifications | [React Hot Toast](https://react-hot-toast.com/) |
+| Styling | [SCSS Modules](https://sass-lang.com/) |
+| Build Tool | [Vite](https://vitejs.dev/) (if used locally) |
 
 ## ⚙️ Installation & Setup
 
