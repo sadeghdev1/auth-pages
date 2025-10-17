@@ -26,6 +26,7 @@ You can set your own API endpoint in the `.env.local` file:
 ```bash
 NEXT_PUBLIC_API_URL=https://share.apidog.com/4b7ea7f3-044c-4fa5-934b-3ad39e0f9619/user-info-20619547e0
 ```
+---
 
 | Category      | Technologies                                    |
 | ------------- | ----------------------------------------------- |
@@ -36,6 +37,8 @@ NEXT_PUBLIC_API_URL=https://share.apidog.com/4b7ea7f3-044c-4fa5-934b-3ad39e0f961
 | Styling       | [SCSS Modules](https://sass-lang.com/)          |
 | HTTP Client   | [Axios](https://axios-http.com/)                |
 | Deployment    | [Vercel](https://vercel.com/)                   |
+
+---
 
 ## ⚙️ Installation & Setup
 
