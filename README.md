@@ -88,4 +88,5 @@ Visit http://localhost:3000
 ## 📦 Deployment
 
 Deployed with Vercel:
-👉 Live Demo: auth-pages1.vercel.app
+
+👉 Live Demo: https://auth-pages1.vercel.app
