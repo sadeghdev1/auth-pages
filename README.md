@@ -7,14 +7,14 @@ Unlike a simple UI project, this app communicates with a real **API** to registe
 
 ## 🚀 Features
 
-- 🧾 **User Registration & Login** connected to backend API  
-- 🔑 **token-based Authentication**  
-- 🧠 **React Hook Form** for form validation and input handling  
-- 🔔 **React Hot Toast** for interactive feedback and notifications  
-- 🎨 **SCSS Modules** for modular, scalable styling  
-- 📊 **Dashboard page** showing user information fetched from API  
-- ⚡ **Next.js (App Router)** with **TypeScript (.tsx)** support  
-- 📱 Fully responsive and mobile-friendly layout  
+-  **User Registration & Login** connected to backend API  
+-  **token-based Authentication**  
+-  **React Hook Form** for form validation and input handling  
+-  **React Hot Toast** for interactive feedback and notifications  
+-  **SCSS Modules** for modular, scalable styling  
+-  **Dashboard page** showing user information fetched from API  
+-  **Next.js (App Router)** with **TypeScript (.tsx)** support  
+-  Fully responsive and mobile-friendly layout  
 
 ---
 
